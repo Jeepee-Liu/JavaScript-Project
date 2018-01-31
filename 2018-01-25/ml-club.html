@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+<script>
+var time=new Date().getHours(); // Current time object
+var day=new Date().getDay(); // Current week day
+
+function swapName() {
+    var nameElem=document.getElementById("nameText");
+    var imgElem=document.getElementById("pop-pipi-img");
+    if(nameElem.innerHTML=="PIPI美") {
+        nameElem.innerHTML="POP子";
+        imgElem.src="pics/pop.jpg";
+    } else if(nameElem.innerHTML=="POP子"){
+        nameElem.innerHTML="PIPI美";
+        imgElem.src="pics/pipi.jpg";
+    }
+}
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+function addLine(){
+    x=document.getElementById("answer");
+    x.innerHTML = x.innerHTML + "<a style=\"color:"
+    + getRandomColor() +"\">没有哦 </a>"
+}
+
+function showTime() {
+    var time = new Date();
+    alert('Welcome!\nThe time now is:\n' + time);
+}
+
+function showWelcome() {
+    alert("澳门首家线上赌场开业啦！！!");
+    var i = 0;
+    while(i < 10 && "3.14"!=prompt("\
+    安娜堡首家线上机器学习会所开业啦！\n\
+    性感荷官，在线调参！\n\
+    来到就是赚到。是兄弟，就来随机森林见我！\n\
+    请输入您的参数C：","")) {
+        i++;
+    }
+}
+
+var count = 0;
+function clickCounter(elem) {
+    count++;
+    elem.innerHTML="Count: " + count;
+}
+</script>
+
+<title>First Online ML Club in Ann Arbor</title>
+
+</head>
+
+<body onload="showWelcome()">
+
+<script>
+    document.write("<h1>安娜堡首家线上<del>赌场</del>机器学习会所</h1>");
+    document.write("<p>First Online <del>Casino</del> Machine Learning Club\
+    in Ann Arbor</p>");
+</script>
+
+<button type="button" style="font-size:18pt" onclick="swapName()">
+    你的名字是……
+</button>
+
+<a id="nameText" style="font-family:verdana;color:red;font-size:30px">POP子</a>
+
+<br />
+
+<img id="pop-pipi-img" src="pics/pop.jpg" width="350" />
+
+<button type="button" onclick="showTime()" style="font-size:18pt">
+    显示时间
+</button>
+<button type="button" onclick="addLine()" style="font-size:18pt">
+    生气了吗？
+</button>
+<button type="button" onshow="clickCounter(this)"
+onclick="clickCounter(this)" style="font-size:18pt">
+    Count: 0
+</button>
+<br />
+
+<p id="answer" style="font-size:28pt"></p>
+
+</body>
+</html>
