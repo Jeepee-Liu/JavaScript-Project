@@ -1,0 +1,4 @@
+1. Met TA and discussed the initial setup of the prototype experiment. The UV detection part and the mechanical part is what he was mainly concerned about.
+2. Studied hard on the simulation details, especially about multi-phase fluid simulation and parameter sweeping (angular velocity).
+3. Worked on the MVR (motor vehicle record) check and got ready for driving to BASF.
+4. Performed simulation of different angular velocity. Searched for and got a more accurate formula of shear stress and plotted 2D plot of shear stress vs radius of differnt velocities.
